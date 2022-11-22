@@ -18,7 +18,7 @@ subprocess.run('ffmpeg -i BBB_short.mp4 -vf scale=360:240 Videos_ex1/360x240/BBB
 subprocess.run('ffmpeg -i BBB_short.mp4 -vf scale=160:120 Videos_ex1/160x120/BBB_160x120.mp4', shell=True)
 '''
 
-'''# Encode 720p video
+# Encode 720p video
 
 # Encode to VP8
 input_video = 'Videos_ex1/720p/BBB_720.mp4'
@@ -124,7 +124,7 @@ input_video = 'Videos_ex1/160x120/BBB_160x120.mp4'
 output_video = 'Videos_ex1/160x120/BBB_160x120_h265.mp4'
 subprocess.run('ffmpeg -i '+input_video+' -c:v libx265 '+output_video, shell=True)
 subprocess.run('ffprobe -loglevel 0 -print_format json -show_format -show_streams '+output_video, shell=True)
-'''
+
 
 # Collage of 720p video with 4 different codecs (VP8, VP9, AV1, H265)
 subprocess.run('ffmpeg -i Videos_ex1/720p/BBB_720_vp8.webm -i Videos_ex1/720p/BBB_720_vp9.mp4 '
